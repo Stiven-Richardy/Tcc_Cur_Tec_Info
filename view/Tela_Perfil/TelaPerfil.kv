@@ -1,0 +1,70 @@
+<TelaPerfilView>:
+    name:'s8'
+    FloatLayout:
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {'center_y': 0.95, 'center_x': 0.05}
+            user_font_size: "30sp"
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = "s3"
+        MDLabel:
+            color: "red"
+            text:"Perfil"
+            pos_hint:{'center_x': .5, 'center_y': .9}
+            halign: 'center'
+            font_style:'H5'
+        MDLabel:
+            halign: 'center'
+            color:'red'
+            text:"Email:"
+            font_style:'H6'
+            pos_hint:{'center_x': .22,'center_y': .75}
+
+        MDLabel:
+            id: text
+            halign: 'center'
+            color:'red'
+            font_style:'H6'
+            pos_hint:{'center_x': .5,'center_y': .75}
+        MDLabel:
+            halign: 'center'
+            text:"Último acesso:"
+            font_style:'H6'
+            pos_hint:{'center_x': .27,'center_y': .70}
+        MDLabel:
+            id: data
+            halign: 'center'
+            font_style:'H6'
+            pos_hint:{'center_x': .45,'center_y': .70}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"____________________________________________"
+            pos_hint:{'center_y': .50}
+        MDLabel:
+            halign: 'center'
+            color:'red'
+            text:"Deseja se tornar colaborador?"
+            font_style:'H6'
+            pos_hint:{'center_y': .45}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"Escaneie ao menos 20 textos"
+            pos_hint:{'center_y': .40}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"Utilizar a plataforma por no mínimo 10 dias"
+            pos_hint:{'center_y': .35}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"Apontar corretamente 8 erros ou mais"
+            pos_hint:{'center_y': .30}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"____________________________________________"
+            pos_hint:{'center_y': .25}

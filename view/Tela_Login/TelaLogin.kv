@@ -1,0 +1,67 @@
+<TelaLoginView>
+
+    name: "s1"
+    md_bg_color: "white"
+    email: email
+    senha: senha
+
+
+    FloatLayout:
+
+        Image:
+            source: 'images/logo.png'
+            size_hint: (0.3, 0.3)
+            pos_hint: {'center_x': .5, 'center_y': .8}
+
+        MDLabel:
+            text: 'CYPHER'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .60}
+
+        MDLabel:
+            text: 'Faça seu Login'
+            font_style: 'Caption'
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .57}
+
+        MDTextField:
+            hint_text: "Email"
+            id: email
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            size_hint_x: .8
+            icon_right: 'email'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Senha"
+            id: senha
+            pos_hint: {'center_x': .5, 'center_y': .4}
+            size_hint_x: .8
+            password: True
+            icon_right: 'lock'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDFillRoundFlatButton
+            text: "Entrar"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .5, 'center_y': .3}
+            size_hint_x: .3
+            on_release:
+                if root.loginBtn() == True: root.manager.current = "s3"
+
+        MDFillRoundFlatButton
+            text: "Cadastre-se"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .5, 'center_y': .2}
+            size_hint_x: .3
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = "s2"

@@ -1,0 +1,6 @@
+image_source = ['']
+mailUser = ['']
+nomeUser = ['']
+senhaUser = ['']
+texto = ['']
+msgErro = ['']

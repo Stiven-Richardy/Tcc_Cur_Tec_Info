@@ -1,0 +1,69 @@
+<TelaContatoView>:
+    name:'s7'
+    FloatLayout:
+        MDIconButton:
+            icon: "arrow-left"
+            pos_hint: {'center_y': 0.95, 'center_x': 0.05}
+            user_font_size: "30sp"
+            on_release:
+                root.manager.transition.direction = 'right'
+                root.manager.current = "s3"
+        MDLabel:
+            color: "red"
+            text:"Contato"
+            pos_hint:{'center_x': .5, 'center_y': .9}
+            halign: 'center'
+            font_style:'H5'
+        MDLabel:
+            halign: 'center'
+            color:'red'
+            font_style:'H6'
+            text:"Email:"
+            pos_hint:{'center_y': .8}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"cypher.suporte@Cypher.com"
+            pos_hint:{'center_y': .75}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"_________________________________"
+            pos_hint:{'center_y': .70}
+        MDLabel:
+            halign: 'center'
+            color:'red'
+            text:"Telefone:"
+            font_style:'H6'
+            pos_hint:{'center_y': .65}
+        MDLabel:
+            halign: 'center'
+            text:"(11) 4002-8922"
+            font_style:'Subtitle1'
+            pos_hint:{'center_y': .60}
+        MDLabel:
+            halign: 'center'
+            text:"(13) 11111-2222"
+            font_style:'Subtitle1'
+            pos_hint:{'center_y': .55}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"_________________________________"
+            pos_hint:{'center_y': .50}
+        MDLabel:
+            halign: 'center'
+            color:'red'
+            text:"Endereço"
+            font_style:'H6'
+            pos_hint:{'center_y': .45}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"Rua Maria Cristina, 50 - Casqueiro, Cubatão - SP"
+            pos_hint:{'center_y': .40}
+        MDLabel:
+            halign: 'center'
+            font_style:'Subtitle1'
+            text:"_________________________________"
+            pos_hint:{'center_y': .35}

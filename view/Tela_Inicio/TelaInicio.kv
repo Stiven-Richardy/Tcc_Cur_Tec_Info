@@ -1,0 +1,97 @@
+<TelaInicioView>
+    name: "s3"
+
+    MDFloatLayout:
+        Image:
+            source: 'images/logo.png'
+            size_hint: (0.05, 0.05)
+            pos_hint: {'center_x': .82, 'center_y': .95}
+
+        MDLabel:
+            text: 'CYPHER'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .9, 'center_y': .95}
+
+        MDIconButton:
+            icon: "menu"
+            pos_hint: {'center_y': 0.95, 'center_x': 0.05}
+            icon_size: "30sp"
+            on_release:
+                n_drawer.set_state('open')
+
+        Image:
+            size_hint_x: .8
+            size_hint_y: .6
+            id: img
+            pos_hint: {'center_x': .5, 'center_y': .6}
+
+        MDLabel:
+            id: text_img
+            text: ""
+            halign: "center"
+            pos_hint: {'center_y': .2}
+
+        MDIconButton:
+            icon: 'file'
+            theme_text_color: "Custom"
+            icon_color: 1,1,1
+            md_bg_color: 1,.2,.2,1
+            elevation: 2
+            size_hint:(.1,.1)
+            pos_hint:{'center_x':0.44,'center_y':0.1}
+            on_release:
+                root.file_chooser()
+
+        MDFillRoundFlatButton
+            text: "Enviar"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .56, 'center_y': .1}
+            elevation: 2
+            size_hint:(.1,.1)
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = "s4"
+
+
+        MDNavigationDrawer:
+            id: n_drawer
+            MDNavigationDrawerMenu:
+                MDNavigationDrawerHeader:
+                    source:'images/logo.png'
+                    title: 'CYPHER'
+                    spacing: '10dp'
+                    padding: "12dp",0,0,"15dp"
+                MDNavigationDrawerItem:
+                    icon:'contacts'
+                    text: 'Contato'
+                    on_press:
+                        n_drawer.set_state('close')
+                        root.manager.transition.direction = 'left'
+                        root.manager.current = "s7"
+                MDNavigationDrawerItem:
+                    icon:'account'
+                    text: 'Meu Perfil'
+                    on_press:
+                        n_drawer.set_state('close')
+                        root.manager.transition.direction = 'left'
+                        root.manager.current = "s8"
+                MDNavigationDrawerItem:
+                    icon:'exit-run'
+                    text: 'Sair'
+                    on_press:
+                        root.sair()
+                        n_drawer.set_state('close')
+                        root.manager.transition.direction = 'right'
+                        root.manager.current = "s1"
+                MDNavigationDrawerItem:
+                    text: 'Versão: 1.2.1'
+
+
+
+
+

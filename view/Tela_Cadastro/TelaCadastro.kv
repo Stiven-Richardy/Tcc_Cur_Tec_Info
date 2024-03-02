@@ -1,0 +1,91 @@
+<TelaCadastroView>
+    name: "s2"
+    md_bg_color: "white"
+    namee: namee
+    email: email
+    password: passw
+    password_confirm: passw_confirm
+
+    FloatLayout:
+        MDIconButton:
+            icon: "arrow-right"
+            pos_hint: {'center_y': 0.95, 'center_x': 0.95}
+            user_font_size: "30sp"
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = "s1"
+
+        Image:
+            source: 'images/logo.png'
+            size_hint: (0.3, 0.3)
+            pos_hint: {'center_x': .5, 'center_y': .8}
+
+        MDLabel:
+            text: 'CYPHER'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .60}
+
+        MDLabel:
+            text: 'Faça seu Cadastro'
+            font_style: 'Caption'
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .57}
+
+        MDTextField:
+            hint_text: "Usuário"
+            id: namee
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            size_hint_x: .85
+            icon_right: 'account'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Email"
+            id: email
+            pos_hint: {'center_x': .5, 'center_y': .4}
+            size_hint_x: .85
+            icon_right: 'email'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Senha"
+            id: passw
+            pos_hint: {'center_x': .275, 'center_y': .3}
+            size_hint_x: .40
+            password: True
+            icon_right: 'lock'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Repita a senha"
+            id: passw_confirm
+            pos_hint: {'center_x': .725, 'center_y': .3}
+            size_hint_x: .40
+            password: True
+            icon_right: 'lock'
+            icon_right_color: app.theme_cls.primary_color
+
+        MDFillRoundFlatButton
+            text: "Cadastrar"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .5, 'center_y': .2}
+            size_hint_x: .3
+            on_release:
+                if root.submit() == True: print("oi")
+
+        MDFillRoundFlatButton
+            text: "Faça seu Login"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .5, 'center_y': .1}
+            size_hint_x: .3
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = "s1"

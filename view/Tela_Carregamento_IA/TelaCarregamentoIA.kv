@@ -1,0 +1,35 @@
+<TelaCarregamentoIAView>:
+    name:'s5'
+
+    MDFloatLayout:
+        Image:
+            source: 'images/logo.png'
+            size_hint: (0.05, 0.05)
+            pos_hint: {'center_x': .82, 'center_y': .95}
+
+        MDLabel:
+            text: 'CYPHER'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .9, 'center_y': .95}
+
+        MDLabel:
+            text: 'Loading'
+            font_style: 'H3'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .6}
+
+        MDProgressBar:
+            id: progress_bar
+            value: 0
+            size_hint_x: .7
+            size_hint_y: .05
+            pos_hint: {'center_x': .5, 'center_y': .5}
+
+        MDLabel:
+            font_style: 'H3'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .6}

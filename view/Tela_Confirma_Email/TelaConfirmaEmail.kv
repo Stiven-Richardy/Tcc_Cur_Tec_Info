@@ -1,0 +1,53 @@
+<TelaConfirmaEmailView>:
+    md_bg_color: "white"
+    name: "sMail"
+    codMail: codMail
+    FloatLayout:
+        MDIconButton:
+            icon: "arrow-right"
+            pos_hint: {'center_y': 0.95, 'center_x': 0.95}
+            user_font_size: "30sp"
+            on_release:
+                root.manager.transition.direction = 'left'
+                root.manager.current = "s1"
+
+        Image:
+            source: 'images/logo.png'
+            size_hint: (0.3, 0.3)
+            pos_hint: {'center_x': .5, 'center_y': .8}
+
+        MDLabel:
+            text: 'CYPHER'
+            font_style: 'H5'
+            bold: True
+            halign: 'center'
+            pos_hint: {'center_x': .5, 'center_y': .60}
+
+        MDTextField:
+            hint_text: "Digite o código."
+            id: codMail
+            pos_hint: {'center_x': .5, 'center_y': .4}
+            size_hint_x: .45
+            icon_right_color: app.theme_cls.primary_color
+
+        MDFillRoundFlatButton
+            text: "Confirmar código"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .5, 'center_y': .2}
+            size_hint_x: .3
+            on_release:
+                if root.on_submit() == True: root.manager.current = "s2"
+
+        MDFillRoundFlatButton
+            text: "Enviar código"
+            font_size: 20
+            elevation: 8
+            text_color: 1,1,1,1
+            md_bg_color: 1.00, 0.19, 0.19
+            pos_hint: {'center_x': .6, 'center_y': .4}
+            size_hint_x: .25
+            on_release:
+                root.on_send()
